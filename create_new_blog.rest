@@ -1,0 +1,9 @@
+POST http://localhost:3003/api/blogs
+Content-Type: application/json 
+
+{
+    "title": "Romania",
+    "author": "benedeti",
+    "url": "http://romania.com",
+    "likes": 5
+}
