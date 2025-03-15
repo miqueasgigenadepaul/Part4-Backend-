@@ -49,3 +49,38 @@ describe('total likes', () => {
     })
   })
 
+  describe('favoriteBlog', () => {
+    const listOfBlogs = [
+      {
+        title: "TDD harms architecture",
+        author: "Robert C. Martin",
+        likes: 0,
+      },
+      {
+        title: "First class tests",
+        author: "Robert C. Martin",
+        likes: 10
+      },
+      {
+        title: "Type wars",
+        author: "Robert C. Martin",
+        likes: 2,
+      },
+      {
+        title: "React patterns",
+        author: "Michael Chan",
+        likes: 7,
+      },
+    ]
+
+    test('Blog with most likes, favoriteBlog', () => {
+      const result = listHelper.favoriteBlog(listOfBlogs)
+      const expected = {
+        title: "First class tests",
+        author: "Robert C. Martin",
+        likes: 10
+      }
+      assert.deepStrictEqual(result, expected)
+    })
+  })
+
